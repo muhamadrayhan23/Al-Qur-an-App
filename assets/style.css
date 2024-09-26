@@ -1,0 +1,93 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #15B392;
+    font-size: 18px;
+    /* Ukuran huruf dasar yang lebih besar */
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    /* Ukuran huruf yang lebih besar untuk judul utama */
+}
+
+.surah-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    /* Memperbesar ukuran kotak surat */
+    gap: 20px;
+    /* Memperbesar jarak antar kotak */
+}
+
+.surah-item {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    /* Memperbesar padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.surah-item:hover {
+    transform: translateY(-5px);
+}
+
+.surah-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 30px;
+    /* Ukuran huruf yang lebih besar untuk nama surat */
+}
+
+.surah-number {
+    color: #666;
+    font-size: 15px;
+    /* Ukuran huruf yang lebih besar untuk nomor surat */
+}
+
+#surahContent {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 28px;
+    /* Ukuran huruf yang lebih besar untuk konten surat */
+}
+
+@media (max-width: 768px) {
+    .surah-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .surah-item {
+        padding: 15px;
+    }
+
+    .surah-name {
+        font-size: 16px;
+    }
+
+    .surah-number {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .surah-list {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
